@@ -1,3 +1,9 @@
+# Link & Ink Frontend
+
+Go to:
+https://github.com/samkim130/Link-N-Ink
+for more information
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
