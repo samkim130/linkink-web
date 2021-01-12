@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="31.138" viewBox="0 0 115 31.138">
+    <defs>
+        <style>.a{fill:#f7f7f7;}.b{fill:#5e8079;}.c{filter:url(#g);}.d{filter:url(#e);}.e{filter:url(#c);}.f{filter:url(#a);}</style>
+        <filter id="a" x="0" y="0.138" width="31" height="31" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha" />
+            <feGaussianBlur stdDeviation="3" result="b" />
+            <feFlood flood-opacity="0.161" />
+            <feComposite operator="in" in2="b" />
+            <feComposite in="SourceGraphic" />
+        </filter>
+        <filter id="c" x="28.35" y="0" width="31.138" height="30.792" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha" />
+            <feGaussianBlur stdDeviation="3" result="d" />
+            <feFlood flood-opacity="0.161" />
+            <feComposite operator="in" in2="d" />
+            <feComposite in="SourceGraphic" />
+        </filter>
+        <filter id="e" x="56" y="0.138" width="32" height="31" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha" />
+            <feGaussianBlur stdDeviation="3" result="f" />
+            <feFlood flood-opacity="0.161" />
+            <feComposite operator="in" in2="f" />
+            <feComposite in="SourceGraphic" />
+        </filter>
+        <filter id="g" x="84" y="0.138" width="31" height="31" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha" />
+            <feGaussianBlur stdDeviation="3" result="h" />
+            <feFlood flood-opacity="0.161" />
+            <feComposite operator="in" in2="h" />
+            <feComposite in="SourceGraphic" />
+        </filter>
+    </defs>
+    <g transform="translate(9 6)">
+        <g class="f" transform="matrix(1, 0, 0, 1, -9, -6)">
+            <circle class="a" cx="6.5" cy="6.5" r="6.5" transform="translate(9 6.14)" />
+        </g>
+        <g class="e" transform="matrix(1, 0, 0, 1, -9, -6)">
+            <path class="a" d="M6.569,0a6.484,6.484,0,0,1,6.569,6.4,6.484,6.484,0,0,1-6.569,6.4A6.484,6.484,0,0,1,0,6.4,6.484,6.484,0,0,1,6.569,0Z" transform="translate(37.35 6)" />
+        </g>
+        <g class="d" transform="matrix(1, 0, 0, 1, -9, -6)">
+            <path class="b" d="M7,0a6.764,6.764,0,0,1,7,6.5A6.764,6.764,0,0,1,7,13,6.764,6.764,0,0,1,0,6.5,6.764,6.764,0,0,1,7,0Z" transform="translate(65 6.14)" />
+        </g>
+        <g class="c" transform="matrix(1, 0, 0, 1, -9, -6)">
+            <circle class="a" cx="6.5" cy="6.5" r="6.5" transform="translate(93 6.14)" />
+        </g>
+    </g>
+</svg>

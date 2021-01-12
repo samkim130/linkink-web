@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+    <defs>
+        <style>.a,.b,.c,.e{fill:none;}.a,.c{stroke:#7f9895;}.a{stroke-linejoin:round;stroke-width:2.5px;}.c{stroke-width:5px;}.d,.f{stroke:none;}.f{fill:#7f9895;}</style>
+    </defs>
+    <g transform="translate(-1704 -1087.201)">
+        <g class="a" transform="translate(1704 1087.201)">
+            <rect class="d" width="37" height="37" rx="9" />
+            <rect class="e" x="1.25" y="1.25" width="34.5" height="34.5" rx="7.75" />
+        </g>
+        <g class="b" transform="translate(1714 1097.201)">
+            <path class="d" d="M8.5,0A8.761,8.761,0,0,1,17,9a8.761,8.761,0,0,1-8.5,9A8.761,8.761,0,0,1,0,9,8.761,8.761,0,0,1,8.5,0Z" />
+            <path class="f" d="M 8.5 2.5 C 5.191590309143066 2.5 2.5 5.415889739990234 2.5 9 C 2.5 12.58411026000977 5.191590309143066 15.5 8.5 15.5 C 11.80841064453125 15.5 14.5 12.58411026000977 14.5 9 C 14.5 5.415889739990234 11.80841064453125 2.5 8.5 2.5 M 8.5 0 C 13.19441986083984 0 17 4.029439926147461 17 9 C 17 13.97056007385254 13.19441986083984 18 8.5 18 C 3.805580139160156 18 0 13.97056007385254 0 9 C 0 4.029439926147461 3.805580139160156 0 8.5 0 Z" />
+        </g>
+        <g class="c" transform="translate(1730 1094.201)">
+            <circle class="d" cx="2" cy="2" r="2" />
+            <circle class="e" cx="2" cy="2" r="0.5" />
+        </g>
+    </g>
+</svg>

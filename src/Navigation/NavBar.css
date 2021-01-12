@@ -1,0 +1,11 @@
+.mainmenu {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  /*background-color: rgba(255, 0, 0, 0.8);*/
+  background-color: #fdffff;
+}
+.top-bar,
+.top-bar ul {
+  background-color: #fdffff;
+}

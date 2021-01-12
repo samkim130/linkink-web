@@ -1,0 +1,34 @@
+.position-right {
+  background: #f9f9f9;
+  font-family: AdobeClean-Bold, Adobe Clean;
+}
+
+/*
+    SideMenuBurger Button
+*/
+.sideMenu-a {
+  fill: #6e8e8e;
+  stroke: #6e8e8e;
+  stroke-width: 5px;
+}
+.sideMenu-b {
+  stroke: none;
+}
+.sideMenu-c {
+  fill: none;
+}
+
+/*
+    side menus
+*/
+.UserProfileImgContainer{
+    height: 158px;
+    width: 158px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sidemenu li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #707070;
+}

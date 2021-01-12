@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="251" height="36.411" viewBox="0 0 251 36.411">
+    <defs>
+        <style>.a{fill:#e4ebeb;}.b{fill:#6e8e8e;font-size:13px;font-family:AdobeClean-Bold, Adobe Clean;font-weight:700;}.c,.d,.e,.g{fill:none;}.d,.e{stroke:#7f9895;}.d{stroke-width:3px;}.e{stroke-width:4px;}.f{stroke:none;}.g{clip-path:url(#b);}</style>
+        <clipPath id="b">
+            <use xlink:href="#a" />
+        </clipPath>
+    </defs>
+    <g transform="translate(0 0.183)">
+        <g transform="translate(0 0)">
+            <rect class="a" width="251" height="36.229" rx="9" transform="translate(0 0)" />
+        </g>
+        <text class="b" transform="translate(66 22.817)">
+            <tspan x="-51.35" y="0">Search for a Tattoo</tspan>
+        </text>
+    </g>
+    <g transform="translate(193)">
+        <rect class="c" width="35" height="34" />
+        <g transform="translate(10 7)">
+            <g class="d">
+                <ellipse class="f" cx="8.5" cy="9" rx="8.5" ry="9" />
+                <ellipse class="c" cx="8.5" cy="9" rx="7" ry="7.5" />
+            </g>
+            <g class="e" transform="translate(14.348 12.459) rotate(40)">
+                <rect id="a" class="f" width="13.905" height="3.59" />
+                <path class="g" d="M0,1.589763879776001h13.905204772949219M11.905204772949219,0v3.589763879776001M13.905204772949219,2h-13.905204772949219M2,3.589763879776001v-3.589763879776001" />
+            </g>
+        </g>
+    </g>
+</svg>

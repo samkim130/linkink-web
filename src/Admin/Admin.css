@@ -1,0 +1,20 @@
+.admin-container {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container {
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  padding:10px;
+}
+.form-inputs{
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}

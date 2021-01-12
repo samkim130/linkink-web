@@ -1,0 +1,36 @@
+.default{
+  fill: #7f9895;
+  stroke: #7f9895;
+  font-size: 9px;
+  font-family: AdobeClean-Bold, Adobe Clean;
+  font-weight: 300;
+}
+.active{
+  fill: #ff8b8b;
+  stroke: #ff8b8b;
+  font-size: 9px;
+  font-family: AdobeClean-Bold, Adobe Clean;
+  font-weight: 300;
+}
+.a,
+.i {
+  fill: #fff;
+}
+.b,
+.c,
+.k,
+.f,
+.h {
+  fill: none;
+}
+.e,
+.h {
+  stroke-width: 3px;
+}
+.f {
+  stroke-width: 4px;
+}
+.k,
+.l {
+  stroke: none;
+}

@@ -1,0 +1,152 @@
+.profile-feed {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+    profile info section
+*/
+.profile-info-list {
+  height: 180px;
+  margin-bottom: 30px;
+}
+
+div.profile-ellipse-image-container {
+  height: 130px;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile-ellipse-image-container img {
+  object-fit: contain;
+}
+.followBtn {
+  background-color: #ff8b8b;
+  font-family: AdobeClean-Bold, Adobe Clean;
+  color: white;
+  border-radius: 50px;
+  height: 35px;
+  width: 120px;
+  margin-top: 12px;
+  margin-bottom: 3px;
+  box-shadow: 3px 3px 6px 0.5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  cursor: pointer;
+}
+.vendor-profile-menu {
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+}
+.vendor-profile-menu li {
+  height: 60px;
+}
+.icon-label {
+  color:#6e8e8e;
+  width: 50%;
+  float: right;
+  text-align: left;
+  max-height: 60px;
+  line-height: 60px;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-left: 5%;
+  margin-right:30%;
+}
+.icon-container {
+  height: 100%;
+  width: 20%;
+  float: left;
+  position: relative;
+}
+.icon-container svg {
+  margin: 0;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/*
+    icons
+*/
+.msg-icon-a,
+.msg-icon-b,
+.msg-icon-d {
+  fill: none;
+}
+.msg-icon-a {
+  stroke: #7f9895;
+  stroke-width: 2px;
+}
+.msg-icon-c,
+.msg-icon-e {
+  stroke: none;
+}
+.msg-icon-e {
+  fill: #7f9895;
+}
+.schedule-icon-a,
+.schedule-icon-b {
+  fill: none;
+}
+.schedule-icon-b,
+.schedule-icon-c,
+.schedule-icon-d {
+  stroke: #7f9895;
+}
+.schedule-icon-b {
+  stroke-width: 2px;
+}
+.schedule-icon-c,
+.schedule-icon-e,
+.schedule-icon-g {
+  fill: #7f9895;
+}
+.schedule-icon-d {
+  fill: #fff;
+}
+.schedule-icon-f,
+.schedule-icon-g {
+  stroke: none;
+}
+.SM-icon-a,
+.SM-icon-b,
+.SM-icon-c,
+.SM-icon-e {
+  fill: none;
+}
+.SM-icon-a,
+.SM-icon-c {
+  stroke: #7f9895;
+}
+.SM-icon-a {
+  stroke-linejoin: round;
+  stroke-width: 2.5px;
+}
+.SM-icon-c {
+  stroke-width: 5px;
+}
+.SM-icon-d,
+.SM-icon-f {
+  stroke: none;
+}
+.SM-icon-f {
+  fill: #7f9895;
+}
+
+/*
+    profile photo feed section
+*/
+
+.profile-image-container {
+  width: 290px;
+  height: 320px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.profile-feed-images {
+  width: 100%;
+  height: 100%;
+}

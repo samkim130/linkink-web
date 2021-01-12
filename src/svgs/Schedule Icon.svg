@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47">
+    <defs>
+        <style>.a,.b{fill:none;}.b,.c,.d{stroke:#7f9895;}.b{stroke-width:2px;}.c,.e,.g{fill:#7f9895;}.d{fill:#fff;}.f,.g{stroke:none;}</style>
+    </defs>
+    <g transform="translate(0.371 0.551)">
+        <g transform="translate(-0.371 -0.123)">
+            <rect class="a" width="47" height="47" transform="translate(0 -0.429)" />
+            <g transform="translate(3.947 4.736)">
+                <g class="b" transform="translate(0.053 -0.165)">
+                    <rect class="f" width="39" height="35" rx="8" />
+                    <rect class="a" x="1" y="1" width="37" height="33" rx="7" />
+                </g>
+                <path class="b" d="M0,0H35.975" transform="translate(1.557 10.11)" />
+                <g class="b" transform="translate(11.053 13.835)">
+                    <ellipse class="f" cx="9" cy="8" rx="9" ry="8" />
+                    <ellipse class="a" cx="9" cy="8" rx="8" ry="7" />
+                </g>
+            </g>
+            <g class="c" transform="translate(13 3.571) rotate(90)">
+                <rect class="f" width="7" height="2" />
+                <rect class="a" x="0.5" y="0.5" width="6" height="1" />
+            </g>
+            <g class="d" transform="translate(16 3.571) rotate(90)">
+                <rect class="f" width="7" height="2" />
+                <rect class="a" x="0.5" y="0.5" width="6" height="1" />
+            </g>
+            <g class="e" transform="translate(28.004 25.156) rotate(129)">
+                <path class="f" d="M 5.671655178070068 4.77583122253418 L 4.804970264434814 4.686204433441162 L 4.964867115020752 2.129148244857788 L 4.996987342834473 1.615478277206421 L 4.482597351074219 1.598228216171265 L 0.530246913433075 1.465679049491882 L 0.5875096917152405 0.5235434770584106 L 6.106614589691162 0.7935565114021301 L 5.671655178070068 4.77583122253418 Z" />
+                <path class="g" d="M 0.1184072494506836 -1.9073486328125e-06 L 6.66129732131958 0.3200984001159668 L 6.114717483520508 5.324318408966064 L 4.27597713470459 5.134168148040771 L 4.465837478637695 2.097948312759399 L -2.86102294921875e-06 1.948178291320801 L 0.1184072494506836 -1.9073486328125e-06 Z" />
+            </g>
+            <g class="c" transform="translate(32 3.571) rotate(90)">
+                <rect class="f" width="7" height="2" />
+                <rect class="a" x="0.5" y="0.5" width="6" height="1" />
+            </g>
+            <g class="d" transform="translate(35 3.571) rotate(90)">
+                <rect class="f" width="7" height="2" />
+                <rect class="a" x="0.5" y="0.5" width="6" height="1" />
+            </g>
+        </g>
+    </g>
+</svg>
