@@ -164,8 +164,8 @@ const Community = () => {
         </ul>
         <hr className={`tabHighlight ${highlightClass} ${slideClass}`} />
       </div>
-      <div class="tabs-content-container">
-        <div class="community-panel">
+      <div className="tabs-content-container">
+        <div className="community-panel">
           {schedules.map((sched, idx) => (
             <Schedule
               key={idx}
