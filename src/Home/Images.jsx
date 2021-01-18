@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getConfiguration } from '../config.jsx';
 
 const Images = ({ imgs }) => {
   const length = imgs.length;
@@ -61,13 +62,13 @@ const Images = ({ imgs }) => {
       {postInfo.slidingImgIdx === null ? null : (
         <img
           className={postInfo.slidingClass}
-          src={`http://localhost:8080/api/v1/image/${imgs[postInfo.slidingImgIdx].imageId}/download`}
+          src={`${getConfiguration()}/api/v1/image/${imgs[postInfo.slidingImgIdx].imageId}/download`}
           alt={postInfo.slidingAlt}
         />
       )}
       <img
         className={postInfo.mainClass}
-        src={`http://localhost:8080/api/v1/image/${imgs[postInfo.imgIdx].imageId}/download`}
+        src={`${getConfiguration()}/api/v1/image/${imgs[postInfo.imgIdx].imageId}/download`}
         alt="samplePostImage"
       />
       {postInfo.imgIdx > 0 ? (

@@ -1,7 +1,9 @@
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
+import { getConfiguration } from '../config.jsx';
 
+axios.defaults.baseURL = getConfiguration();
 const PostDropzone = ({ vendorId, postId, updatePosts }) => {
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -12,7 +14,7 @@ const PostDropzone = ({ vendorId, postId, updatePosts }) => {
       formData.append("file", file);
       if (postId <0) {
         axios
-          .post(`http://localhost:8080/api/v1/post/${vendorId}/add`, formData, {
+          .post(`/api/v1/post/${vendorId}/add`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -26,13 +28,13 @@ const PostDropzone = ({ vendorId, postId, updatePosts }) => {
           });
       } else{
         axios
-          .put(`http://localhost:8080/api/v1/post/${postId}/add`, formData, {
+          .put(`/api/v1/post/${postId}/add`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
           })
           .then(() => {
-            console.log("file uploaded successfully onto post#" + `${postId}`);
+            console.log(`file uploaded successfully onto post#${postId}`);
             updatePosts();
           })
           .catch((err) => {
@@ -40,7 +42,7 @@ const PostDropzone = ({ vendorId, postId, updatePosts }) => {
           });
       }
     },
-    [vendorId]
+    [vendorId, postId,updatePosts]
   );
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 

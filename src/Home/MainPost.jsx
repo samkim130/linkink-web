@@ -1,5 +1,6 @@
 import React from "react";
 import Images from "./Images.jsx";
+import { getConfiguration } from '../config.jsx';
 import { Link } from "react-router-dom";
 
 const MainPost = ({ post, profile }) => {
@@ -17,7 +18,7 @@ const MainPost = ({ post, profile }) => {
             <div className="cell small-3">
               <img
                 className="postProfileImg"
-                src={`http://localhost:8080/api/v1/vendor/${profile.profileId}/image/download/${profile.profileLink}`}
+                src={`${getConfiguration()}/api/v1/vendor/${profile.profileId}/image/download/${profile.profileLink}`}
                 alt="sampleProfileImage"
               />
             </div>

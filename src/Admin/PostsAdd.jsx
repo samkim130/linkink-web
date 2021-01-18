@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Images from "../Home/Images.jsx";
 import PostDropzone from "./PostDropzone.jsx";
 import axios from "axios";
+import { getConfiguration } from '../config.jsx';
+
+axios.defaults.baseURL = getConfiguration();
 
 const PostsAdd = ({ vendorId, vendorPosts }) => {
   const [posts, setPosts] = useState(vendorPosts);
@@ -11,7 +14,7 @@ const PostsAdd = ({ vendorId, vendorPosts }) => {
 
   function updatePosts() {
     axios
-      .get(`http://localhost:8080/api/v1/post/byVendor/${vendorId}`)
+      .get(`/api/v1/post/byVendor/${vendorId}`)
       .then((res) => {
         console.log(res);
         setPosts(res.data);
@@ -22,7 +25,7 @@ const PostsAdd = ({ vendorId, vendorPosts }) => {
   }
   function onDeleteClick(e) {
     axios
-      .delete(`http://localhost:8080/api/v1/post/${e.target.value}/remove`)
+      .delete(`/api/v1/post/${e.target.value}/remove`)
       .then((res) => {
         console.log(res);
         updatePosts();

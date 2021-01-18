@@ -1,14 +1,16 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import { getConfiguration } from '../config.jsx';
 import "./HomeGrid.css";
-import MainPost from "./MainPost";
-//import {NavBarContext} from "../ContextProviders/NavigationContext.jsx";
+import MainPost from "./MainPost.jsx";
+
+axios.defaults.baseURL = getConfiguration();
 
 const Home = () => {
   const [feed, setFeed]=useState([]);
   useEffect(()=>{
     axios
-    .get(`http://localhost:8080/api/v1/post`)
+    .get(`/api/v1/post`)
     .then((res) => {
       console.log(res);
       setFeed(res.data);

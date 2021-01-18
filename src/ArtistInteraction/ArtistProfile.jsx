@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { getConfiguration } from '../config.jsx';
 import { MsgSVG, ScheduleSVG, SMSVG } from "./ArtistProfileSVGs.jsx";
-
-import { sampleProfilePosts } from "../FE_SampleData/SamplePosts.jsx";
-
 import "./ProfileGrid.css";
+
+axios.defaults.baseURL = getConfiguration();
 
 const ImagePost = ({ id }) => {
   //const postDate = "";
@@ -16,7 +16,7 @@ const ImagePost = ({ id }) => {
     <div className="profile-image-container">
       <img
         className="profile-feed-images"
-        src={`http://localhost:8080/api/v1/image/${id}/download`}
+        src={`${getConfiguration()}/api/v1/image/${id}/download`}
         alt={"image#" + id}
       ></img>
     </div>
@@ -28,7 +28,7 @@ const ArtistProfile = () => {
   const [profile, setProfile] = useState();
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/vendor/${profileId}/get`)
+      .get(`/api/v1/vendor/${profileId}/get`)
       .then((res) => {
         console.log(res.data);
         setProfile(res.data);
@@ -52,7 +52,7 @@ const ArtistProfile = () => {
               <div className="profile-ellipse-image-container">
                 <img
                   className="postProfileImg"
-                  src={`http://localhost:8080/api/v1/vendor/${profile.profileId}/image/download/${profile.profileLink}`}
+                  src={`${getConfiguration()}/api/v1/vendor/${profile.profileId}/image/download/${profile.profileLink}`}
                   alt="sampleProfileImage"
                 />
               </div>

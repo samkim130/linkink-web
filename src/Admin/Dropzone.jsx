@@ -1,7 +1,9 @@
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
+import { getConfiguration } from '../config.jsx';
 
+axios.defaults.baseURL = getConfiguration();
 const Dropzone = ({ selection, vendorId, updateVendor }) => {
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -19,7 +21,7 @@ const Dropzone = ({ selection, vendorId, updateVendor }) => {
 
       axios
         .post(
-          `http://localhost:8080/api/v1/vendor/${vendorId}/image/upload`,
+          `/api/v1/vendor/${vendorId}/image/upload`,
           formData,
           {
             headers: {

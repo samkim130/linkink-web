@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropzone from './Dropzone.jsx';
+import { getConfiguration } from '../config.jsx';
 
 const VendorInfoForm = ({
   vendorForm,
@@ -144,7 +145,7 @@ const VendorInfoForm = ({
       {vendorForm.profileLink ? (
         <img
           key={new Date()}
-          src={`http://localhost:8080/api/v1/vendor/${vendorForm.profileId}/image/download/${vendorForm.profileLink}`}
+          src={`${getConfiguration()}/api/v1/vendor/${vendorForm.profileId}/image/download/${vendorForm.profileLink}`}
           alt={vendorForm.profileLink}
         />
       ) : null}

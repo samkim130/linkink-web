@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { getConfiguration } from '../config.jsx';
 import VendorInfoForm from "./VendorInfoForm.jsx";
 import PostsAdd from "./PostsAdd.jsx";
 import "./Admin.css";
+
+axios.defaults.baseURL = getConfiguration();
 
 const DEFAULT_FILL_IN = {
   profileId: -1,
@@ -29,7 +32,7 @@ const Admin = () => {
   }, []);
   function updateVendor() {
     axios
-      .get(`http://localhost:8080/api/v1/vendor/basicList`)
+      .get(`/api/v1/vendor/basicList`)
       .then((res) => {
         console.log(res);
         setVendorList(res.data);
@@ -46,7 +49,7 @@ const Admin = () => {
       setVendorForm(DEFAULT_FILL_IN);
     } else {
       axios
-        .get(`http://localhost:8080/api/v1/vendor/${selection}/get`)
+        .get(`/api/v1/vendor/${selection}/get`)
         .then((res) => {
           console.log(res.data);
           console.log(res.data.posts);
@@ -64,7 +67,7 @@ const Admin = () => {
   function onAddClick() {
     if (selection !== "default") return;
     axios
-      .post(`http://localhost:8080/api/v1/vendor/add`, vendorForm, {
+      .post(`/api/v1/vendor/add`, vendorForm, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -83,7 +86,7 @@ const Admin = () => {
     const vendorId = Number(selection);
     axios
       .put(
-        `http://localhost:8080/api/v1/vendor/${vendorId}/update`,
+        `/api/v1/vendor/${vendorId}/update`,
         vendorForm,
         {
           headers: {
@@ -103,7 +106,7 @@ const Admin = () => {
     if (selection === "default") return;
     const vendorId = Number(selection);
     axios
-      .delete(`http://localhost:8080/api/v1/vendor/${vendorId}/remove`)
+      .delete(`/api/v1/vendor/${vendorId}/remove`)
       .then((res) => {
         console.log(res);
         setSelection("default");
