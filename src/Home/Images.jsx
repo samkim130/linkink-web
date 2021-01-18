@@ -61,13 +61,13 @@ const Images = ({ imgs }) => {
       {postInfo.slidingImgIdx === null ? null : (
         <img
           className={postInfo.slidingClass}
-          src={imgs[postInfo.slidingImgIdx]}
+          src={`http://localhost:8080/api/v1/image/${imgs[postInfo.slidingImgIdx].imageId}/download`}
           alt={postInfo.slidingAlt}
         />
       )}
       <img
         className={postInfo.mainClass}
-        src={imgs[postInfo.imgIdx]}
+        src={`http://localhost:8080/api/v1/image/${imgs[postInfo.imgIdx].imageId}/download`}
         alt="samplePostImage"
       />
       {postInfo.imgIdx > 0 ? (

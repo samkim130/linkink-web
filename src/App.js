@@ -61,7 +61,7 @@ function App() {
                 </Route>
                 <Route exact path="/profile"></Route>
                 <Route
-                  exact path="/vendor/:profileID"
+                  exact path="/vendor/:profileId"
                   children={<ArtistProfile />}
                 ></Route>
                 <Route exact path="/admin">

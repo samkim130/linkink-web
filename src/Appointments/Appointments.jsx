@@ -123,7 +123,7 @@ const Appointments = () => {
 
   function onTabClick(idx) {
     if (tabState.activeIdx === idx) return;
-    console.log(`${idx} and ${tabState.activeIdx}`);
+    //console.log(`${idx} and ${tabState.activeIdx}`);
 
     const diff = idx - tabState.activeIdx;
     switch (diff) {

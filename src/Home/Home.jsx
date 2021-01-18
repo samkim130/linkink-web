@@ -1,28 +1,39 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from 'axios';
 import "./HomeGrid.css";
 import MainPost from "./MainPost";
 //import {NavBarContext} from "../ContextProviders/NavigationContext.jsx";
 
-import SampleMembers from "../FE_SampleData/SampleMembers.jsx";
-import SamplePosts from "../FE_SampleData/SamplePosts.jsx";
-
 const Home = () => {
+  const [feed, setFeed]=useState([]);
+  useEffect(()=>{
+    axios
+    .get(`http://localhost:8080/api/v1/post`)
+    .then((res) => {
+      console.log(res);
+      setFeed(res.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  },[]);
+
   return (
     <div className="grid-container feed">
       <div className="grid-y grid-padding-y">
-        {SamplePosts.map((post, id) => {
-          const profile = SampleMembers.get(post.profileID);
+        {feed.map((post) => {
+          const profile = post.vendor;
           if (profile === undefined)
             console.log(
               "error: profile#" +
-                post.profileID +
+                post.vendor.profileId +
                 " doesn't exist for post " +
-                post.postID
+                post.postId
             );
 
           return (
-            <div className="cell" key={id}>
-              <MainPost postInfo={post} profileInfo={profile}></MainPost>
+            <div className="cell" key={post.postId}>
+              <MainPost post={post} profile={profile}></MainPost>
             </div>
           );
         })}
