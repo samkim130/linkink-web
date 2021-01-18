@@ -1,4 +1,6 @@
 # Link & Ink Frontend
+Accessible on:
+https://linkink-web.herokuapp.com/
 
 Go to:
 https://github.com/samkim130/Link-N-Ink
