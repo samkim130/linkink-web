@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { getConfiguration } from '../config.jsx';
+import { getConfiguration } from "../config.jsx";
 import VendorInfoForm from "./VendorInfoForm.jsx";
 import PostsAdd from "./PostsAdd.jsx";
 import "./Admin.css";
@@ -18,11 +18,17 @@ const DEFAULT_FILL_IN = {
   state: "",
   phoneNumber: "999-999-9999",
   profileLink: "",
-  posts:[],
-  images:[],
+  posts: [],
+  images: [],
 };
 
 const Admin = () => {
+  //admin passcode
+  const [adminCode, setAdminCode] = useState("");
+  function onAdminCodeInputChange(e) {
+    setAdminCode(e.target.value);
+  }
+
   //get from backend
   const [vendorList, setVendorList] = useState([]);
   const [selection, setSelection] = useState("default");
@@ -67,7 +73,7 @@ const Admin = () => {
   function onAddClick() {
     if (selection !== "default") return;
     axios
-      .post(`/api/v1/vendor/add`, vendorForm, {
+      .post(`/api/v1/vendor/add/wAdmin/${adminCode}`, vendorForm, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -85,15 +91,11 @@ const Admin = () => {
     if (selection === "default") return;
     const vendorId = Number(selection);
     axios
-      .put(
-        `/api/v1/vendor/${vendorId}/update`,
-        vendorForm,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      .put(`/api/v1/vendor/${vendorId}/update/wAdmin/${adminCode}`, vendorForm, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => {
         console.log(res);
         updateVendor();
@@ -106,7 +108,7 @@ const Admin = () => {
     if (selection === "default") return;
     const vendorId = Number(selection);
     axios
-      .delete(`/api/v1/vendor/${vendorId}/remove`)
+      .delete(`/api/v1/vendor/${vendorId}/remove/wAdmin/${adminCode}`)
       .then((res) => {
         console.log(res);
         setSelection("default");
@@ -121,9 +123,18 @@ const Admin = () => {
     <div className="admin-container">
       <h4>Temporary Form to add Vendors and Posts to the account</h4>
       <h6>
-        must need have valid backend Amazon S3 connection and docker/(or other
-        local) database set up
+        needs admin access using hashed password to prevent overload of data in
+        S3 and Heroku postgres (free tiers)
       </h6>
+      <label>Admin Code :</label>
+      <input
+        className="form-inputs"
+        id="adminCode"
+        type="text"
+        value={adminCode}
+        onChange={onAdminCodeInputChange}
+      />
+
       <br />
       {selection === "default" ? (
         <button className="button" onClick={onAddClick}>
@@ -162,8 +173,15 @@ const Admin = () => {
         setVendorForm={setVendorForm}
         selection={selection}
         updateVendor={updateVendor}
+        adminCode={adminCode}
       />
-       {selection === "default" ? null : (<PostsAdd vendorId={vendorForm.profileId} vendorPosts={vendorForm.posts}/>)}
+      {selection === "default" ? null : (
+        <PostsAdd
+          vendorId={vendorForm.profileId}
+          vendorPosts={vendorForm.posts}
+          adminCode={adminCode}
+        />
+      )}
     </div>
   );
 };

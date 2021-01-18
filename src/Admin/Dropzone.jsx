@@ -4,7 +4,7 @@ import axios from "axios";
 import { getConfiguration } from '../config.jsx';
 
 axios.defaults.baseURL = getConfiguration();
-const Dropzone = ({ selection, vendorId, updateVendor }) => {
+const Dropzone = ({ selection, vendorId, updateVendor,adminCode }) => {
   const onDrop = useCallback(
     (acceptedFiles) => {
       if (selection === "default") return;
@@ -21,7 +21,7 @@ const Dropzone = ({ selection, vendorId, updateVendor }) => {
 
       axios
         .post(
-          `/api/v1/vendor/${vendorId}/image/upload`,
+          `/api/v1/vendor/${vendorId}/image/upload/wAdmin/${adminCode}`,
           formData,
           {
             headers: {
@@ -37,7 +37,7 @@ const Dropzone = ({ selection, vendorId, updateVendor }) => {
           console.log(err);
         });
     },
-    [selection, vendorId, updateVendor]
+    [adminCode,selection, vendorId, updateVendor]
   );
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 

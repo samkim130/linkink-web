@@ -6,7 +6,7 @@ import { getConfiguration } from '../config.jsx';
 
 axios.defaults.baseURL = getConfiguration();
 
-const PostsAdd = ({ vendorId, vendorPosts }) => {
+const PostsAdd = ({ vendorId, vendorPosts, adminCode }) => {
   const [posts, setPosts] = useState(vendorPosts);
   useEffect(() => {
     setPosts(vendorPosts);
@@ -25,7 +25,7 @@ const PostsAdd = ({ vendorId, vendorPosts }) => {
   }
   function onDeleteClick(e) {
     axios
-      .delete(`/api/v1/post/${e.target.value}/remove`)
+      .delete(`/api/v1/post/${e.target.value}/remove/wAdmin/${adminCode}`)
       .then((res) => {
         console.log(res);
         updatePosts();
@@ -49,6 +49,7 @@ const PostsAdd = ({ vendorId, vendorPosts }) => {
             vendorId={vendorId}
             postId={post.postId}
             updatePosts={updatePosts}
+            adminCode={adminCode}
           />
         </div>
       ))}
@@ -58,6 +59,7 @@ const PostsAdd = ({ vendorId, vendorPosts }) => {
           vendorId={vendorId}
           postId={-1}
           updatePosts={updatePosts}
+          adminCode={adminCode}
         />
       </div>
     </div>

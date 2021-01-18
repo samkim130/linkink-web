@@ -4,7 +4,7 @@ import axios from "axios";
 import { getConfiguration } from '../config.jsx';
 
 axios.defaults.baseURL = getConfiguration();
-const PostDropzone = ({ vendorId, postId, updatePosts }) => {
+const PostDropzone = ({ vendorId, postId, updatePosts,adminCode }) => {
   const onDrop = useCallback(
     (acceptedFiles) => {
       // Do something with the files
@@ -14,7 +14,7 @@ const PostDropzone = ({ vendorId, postId, updatePosts }) => {
       formData.append("file", file);
       if (postId <0) {
         axios
-          .post(`/api/v1/post/${vendorId}/add`, formData, {
+          .post(`/api/v1/post/${vendorId}/add/wAdmin/${adminCode}`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -28,7 +28,7 @@ const PostDropzone = ({ vendorId, postId, updatePosts }) => {
           });
       } else{
         axios
-          .put(`/api/v1/post/${postId}/add`, formData, {
+          .put(`/api/v1/post/${postId}/add/wAdmin/${adminCode}`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -42,7 +42,7 @@ const PostDropzone = ({ vendorId, postId, updatePosts }) => {
           });
       }
     },
-    [vendorId, postId,updatePosts]
+    [adminCode,vendorId, postId,updatePosts]
   );
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 

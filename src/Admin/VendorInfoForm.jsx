@@ -7,6 +7,7 @@ const VendorInfoForm = ({
   setVendorForm,
   selection,
   updateVendor,
+  adminCode
 }) => {
   function onInputChange(e) {
     const updatedVal =
@@ -154,6 +155,7 @@ const VendorInfoForm = ({
           selection={selection}
           vendorId={vendorForm.profileId}
           updateVendor={updateVendor}
+          adminCode={adminCode}
         />
       )}
     </div>
